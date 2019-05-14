@@ -1,0 +1,30 @@
+<h1><%= @cocktail.name %></h1>
+<!-- dose needed for each ingredient -->
+<% @cocktail.doses.each do |dose| %>
+  <p>
+  <%= dose.description %>
+  <%= dose.ingredient.name %>
+  </p>
+  <%= link_to "Delete this dose", cocktail_path(@cocktail), method: :delete  %>
+<% end %>
+
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :description %>
+    <%= f.association :ingredient %>
+
+
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: "btn btn-primary mb-3" %>
+  </div>
+<% end %>
+
+
+
+
+<%= link_to "Back to homepage", cocktails_path, class: "btn btn-primary mb-3" %>
