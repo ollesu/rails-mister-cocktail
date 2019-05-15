@@ -1,14 +1,25 @@
-<h1><%= @cocktail.name %></h1>
-<!-- dose needed for each ingredient -->
-<% @cocktail.doses.each do |dose| %>
-  <p>
-  <%= dose.description %>
-  <%= dose.ingredient.name %>
-  <%= link_to "Delete this dose", dose_path(dose), method: :delete  %>
-  </p>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1><%= @cocktail.name %></h1>
+    </div>
+  </div>
 
-<%= simple_form_for [@cocktail, @dose] do |f| %>
+
+<!-- dose needed for each ingredient -->
+    <% @cocktail.doses.each do |dose| %>
+      <div class="card-product">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg">
+        <div class="card-product-infos">
+          <h2><%= dose.ingredient.name %></h2>
+          <p><%= dose.description %></p>
+          <p><%= link_to "Delete this dose", dose_path(dose), method: :delete %></p>
+    </div>
+  </div>
+      <% end %>
+
+<div class="container">
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
@@ -16,15 +27,23 @@
     <%= f.input :description %>
     <%= f.association :ingredient %>
 
-
-  </div>
-
   <div class="form-actions">
     <%= f.button :submit, class: "btn btn-primary mb-3" %>
   </div>
+
+  </div>
+
+
+
+
 <% end %>
+</div>
+
 
 
 
 
 <%= link_to "Back to homepage", cocktails_path, class: "btn btn-primary mb-3" %>
+
+
+
