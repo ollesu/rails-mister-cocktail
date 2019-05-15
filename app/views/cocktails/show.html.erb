@@ -4,8 +4,8 @@
   <p>
   <%= dose.description %>
   <%= dose.ingredient.name %>
+  <%= link_to "Delete this dose", dose_path(dose), method: :delete  %>
   </p>
-  <%= link_to "Delete this dose", cocktail_path(@cocktail), method: :delete  %>
 <% end %>
 
 <%= simple_form_for [@cocktail, @dose] do |f| %>

@@ -1,5 +1,4 @@
 class CocktailsController < ApplicationController
-
   before_action :find_cocktail, only: [:show]
 
   def index
@@ -9,7 +8,6 @@ class CocktailsController < ApplicationController
   def show
     @dose = Dose.new
   end
-
 
   def new
     @cocktail = Cocktail.new
@@ -33,5 +31,4 @@ class CocktailsController < ApplicationController
   def cocktail_params
     params.require(:cocktail).permit(:name)
   end
-
 end

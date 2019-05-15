@@ -1,4 +1,4 @@
-<h1>All cocktails</h1>
+<h1 class="text-center">All cocktails</h1>
 <ul>
 <% @cocktails.each do |cocktail| %>
   <%= link_to cocktail_path(cocktail) do %>
@@ -10,3 +10,19 @@
 </ul>
 
 <%= link_to "Add a cocktail", new_cocktail_path %>
+
+
+<div class="container">
+  <div class="card" style="width: 18rem;">
+    <img src="https://images.unsplash.com/photo-1512103865222-dcf9531c9961?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" width=200px class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">
+
+
+
+
+      </h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+</div>
