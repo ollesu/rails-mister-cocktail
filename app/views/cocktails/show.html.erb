@@ -9,7 +9,10 @@
 <!-- dose needed for each ingredient -->
     <% @cocktail.doses.each do |dose| %>
       <div class="card-product">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg">
+      <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+
+
+
         <div class="card-product-infos">
           <h2><%= dose.ingredient.name %></h2>
           <p><%= dose.description %></p>
@@ -17,6 +20,9 @@
     </div>
   </div>
       <% end %>
+
+
+
 
 <div class="container">
   <%= simple_form_for [@cocktail, @dose] do |f| %>
