@@ -2,16 +2,16 @@
 
 <div class="container">
   <div class="row">
-    <div class="row">
     <% @cocktails.each do |cocktail| %>
+    <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-3">
         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%= cl_image_path cocktail.photo %>')">
           <h2><%= cocktail.name %></h2>
           <%= link_to "See more", cocktail_path(cocktail), class: 'card-link btn btn-primary' %>
         </div>
       </div>
-    <% end %>
     </div>
+    <% end %>
   </div>
 </div>
 
