@@ -4,7 +4,7 @@
 
 .card-product {
   overflow: hidden;
-  width: 600px;
+  width: 400px;
   height: 120px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -12,6 +12,7 @@
   align-items: center;
   margin-bottom: 30px;
   margin-left: 20px;
+  margin-top: 15px;
 }
 
 .card-product img {
@@ -44,4 +45,13 @@
 
 .container h1 {
   text-align: center;
+  margin-top: 15px;
+}
+
+#new_dose {
+  width: 400px;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
 }
