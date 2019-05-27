@@ -1,3 +1,5 @@
-<%= render "form", cocktail: @cocktail %>
+<div class="container">
+  <%= render "form", cocktail: @cocktail %>
+<%= link_to "Back to homepage", cocktails_path, class: 'btn btn-primary mt-4' %>
+</div>
 
-<%= link_to "Back to homepage", cocktails_path %>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsMisterCocktail</title>
+    <title>Find Cocktail Recipes Here</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -12,12 +12,7 @@
   </head>
 
   <body>
-    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('<%= image_path 'cocktails_banner.jpeg' %>');">
-    <h1>Our cocktails</h1>
-    <p>All things cocktail for your next dinner</p>
-    <%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-primary btn-lg mt-2" %>
-  </div>
-</div>
+    <%= render "shared/navbar" %>
     <%= yield %>
     <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
     <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
