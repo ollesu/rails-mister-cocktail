@@ -2,8 +2,10 @@
   justify-content: space-between;
   background: transparent;
   transition: 0.5s background-color ease;
-  height: 60px;
-  padding-top: 20px;
+  height: 80px;
+  padding-top: 30px;
+  border-bottom:1px solid rgb(242,235,235);
+  padding-bottom: 30px;
 }
 
 .navbar-fixed-white {
@@ -50,5 +52,12 @@
   border-radius: 4px;
   color: black;
   text-align: center;
+  text-decoration: none;
+  opacity: 0.9;
 }
+
+.nav-add-btn:hover {
+  text-decoration: none;
+}
+
 
