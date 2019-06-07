@@ -1,18 +1,19 @@
 <div class="container">
   <div class="container" style="width: 650px" "margin: 0 auto">
-   <%= render "shared/banner" %>
+   <%#= render "shared/banner" %>
  </div>
   <!-- dose needed for each ingredient -->
       <% @cocktail.doses.each do |dose| %>
         <div class="flexbox-cocktail">
-          <div class="card-product">
+          <div class="container">
+            <h2>Ingredients</h2>
             <!-- <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg"> -->
-            <div class="card-product-infos">
+            <!-- <div class="card-product-infos"> -->
               <h2><%= dose.ingredient.name %></h2>
               <p><%= dose.description %></p>
               <p><%= link_to "Delete ingredient", dose_path(dose), method: :delete %></p>
-            </div>
           </div>
+          <!-- </div> -->
       <% end %>
 
 
