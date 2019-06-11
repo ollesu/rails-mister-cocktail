@@ -1,5 +1,7 @@
-<div class="container" style="width: 650px" "margin: 0 auto">
-  <%= render "form", cocktail: @cocktail %>
-<%= link_to "Back to homepage", cocktails_path, class: 'btn btn-primary mt-4' %>
+<div class="container">
+  <h1 class="text-center">Create a cocktail</h1>
+  <div class="row justify-content-center">
+    <%= render "form", cocktail: @cocktail %>
+  </div>
 </div>
 
