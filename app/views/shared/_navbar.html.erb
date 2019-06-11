@@ -16,8 +16,17 @@
         <%= link_to "#", class: 'nav-btn' do %>
           Search       <i class="fas fa-search"></i>
         <% end %>
-        <%= link_to "Add a cocktail", new_cocktail_path, class: 'nav-add-btn' %>
+        <%= link_to "Add a cocktail", new_cocktail_path, class: 'create-btn nav-add-btn' %>
       </li>
     </ul>
   </div>
 </div>
+
+<!--
+ const createBtn = document.getElementById('create-btn');
+  const input = document.getElementById('search');
+  input.addEventListener("keyup", (event) => {
+    // form.submit();
+    submitBtn.click();
+  }); -->
+
