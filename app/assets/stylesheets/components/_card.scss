@@ -70,7 +70,7 @@ body h1, h2, h3, h4 {
 }
 
 .flexbox-container .cocktails-ingredients-form {
-  width: 500px;
+  width: 540px;
 }
 
 .coloured-box {
@@ -80,16 +80,20 @@ body h1, h2, h3, h4 {
   width: 550px;
   height: 100px;
   padding: 5px;
-  // display: block;
+  position: relative;
 }
 
-.coloured-box p {
+.coloured-box span {
   text-align: center;
+  // vertical-align: middle;
+  padding: 10px;
+  position: absolute;
+  top: 18px;
 }
 
 .cocktail-photo {
   display: block;
-  vertical-align:bottom;
+  vertical-align: bottom;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
   // line-height: 0;
 }
