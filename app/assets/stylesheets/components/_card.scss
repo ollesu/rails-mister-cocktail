@@ -27,10 +27,11 @@
 }
 
 .container {
-  margin-top: 130px;
   max-width: 100%;
+  margin-top: 130px;
   margin-left: 20px;
   margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 .container h1 {
@@ -56,9 +57,10 @@ body h1, h2, h3, h4 {
 
 .flexbox-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin: 0 auto;
   word-wrap: break-word;
+  padding: 40px;
 }
 
 .flexbox-container .cocktails-ingredients-form {
