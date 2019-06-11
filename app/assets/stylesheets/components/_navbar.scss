@@ -1,6 +1,6 @@
 .navbar-fixed {
   justify-content: space-between;
-  background: #FFDFE4;
+  // background: #FFDFE4;
   opacity: 0.9;
   transition: 0.5s background-color ease;
   height: 80px;
@@ -20,14 +20,6 @@
 .navbar-fixed .navbar-brand img {
   width: 40px;
 }
-
-// .logo {
-//   transition: 0.5s ease;
-// }
-
-// .logo:hover {
-//   transform: rotate(180deg);
-// }
 
 .nav-btn {
   border: 1px solid #D3D3D3;

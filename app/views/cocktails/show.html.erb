@@ -1,39 +1,43 @@
 <div class="container">
-  <div class="container" style="width: 650px" "margin: 0 auto">
    <%#= render "shared/banner" %>
- </div>
+  <div class="flexbox-container">
   <!-- dose needed for each ingredient -->
+    <div class="cocktail-photo">
+       <%= cl_image_tag @cocktail.photo, width: 400, height: 500, crop: :fill  %>
+    </div>
+    <div class="cocktails-ingredients-form">
+      <div class="cocktail-details">
+        <h2><%= @cocktail.name %></h2>
+        <br>
+        <%= @cocktail.description %>
+      </div>
       <% @cocktail.doses.each do |dose| %>
-        <div class="flexbox-cocktail">
-          <div class="container">
-            <h2>Ingredients</h2>
-            <!-- <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg"> -->
-            <!-- <div class="card-product-infos"> -->
-              <h2><%= dose.ingredient.name %></h2>
-              <p><%= dose.description %></p>
-              <p><%= link_to "Delete ingredient", dose_path(dose), method: :delete %></p>
-          </div>
-          <!-- </div> -->
+        <div class="ingredients">
+          <h2>Ingredients</h2>
+          <hr>
+          <h4><%= dose.ingredient.name %></h4>
+          <p><%= dose.description %></p>
+          <p><%= link_to "Delete ingredient", dose_path(dose), method: :delete %></p>
       <% end %>
+      </div>
 
+      <div class="container-form">
+        <%= simple_form_for [@cocktail, @dose] do |f| %>
+        <%= f.error_notification %>
+        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-          <div class="container-form">
-            <%= simple_form_for [@cocktail, @dose] do |f| %>
-            <%= f.error_notification %>
-            <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-
-            <div class="form-inputs">
-              <%= f.input :description %>
-              <%= f.association :ingredient %>
-            </div>
-
-            <div class="form-actions">
-              <%= f.button :submit, class: "btn btn-primary mb-3" %>
-            </div>
-            <% end %>
-          </div>
+        <div class="form-inputs">
+          <%= f.input :description %>
+          <%= f.association :ingredient %>
         </div>
-  <!-- </div> -->
+
+        <div class="form-actions">
+          <%= f.button :submit, class: "btn btn-primary mb-3" %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
 
 
