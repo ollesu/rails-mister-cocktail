@@ -1,24 +1,3 @@
-# README
+Mr Cocktail is a recipe web app I built on Ruby on Rails for a Le Wagon challenge. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+You can add cocktail recipes and view what others have added to the list. 
