@@ -1,6 +1,5 @@
 .navbar-fixed {
   justify-content: space-between;
-  // background: #FFDFE4;
   opacity: 0.9;
   transition: 0.5s background-color ease;
   height: 80px;
@@ -18,17 +17,20 @@
 }
 
 .navbar-fixed .navbar-brand img {
-  width: 40px;
+  width: 50px;
 }
 
 .nav-btn {
   border: 1px solid #D3D3D3;
-  color: #D3D3D3;
+  color: black;
+  background-color: #F1E8F9;
   padding: 7px 16px;
   margin: 10px;
   border-radius: 4px;
   text-align: center;
   text-decoration: none;
+  opacity: 0.6;
+
 }
 
 .nav-btn:hover {
