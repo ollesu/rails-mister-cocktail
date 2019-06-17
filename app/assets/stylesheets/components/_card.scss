@@ -95,9 +95,20 @@ body h1, h2, h3, h4 {
   display: block;
   vertical-align: bottom;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
-  // line-height: 0;
 }
 
 .cocktail-details h1 {
   display: inline-block;
 }
+
+#banner-text {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 44px;
+  display: inline-block;
+  -webkit-transform: rotate(-2deg);
+  -moz-transform: rotate(-2deg);
+  -o-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+}
+
