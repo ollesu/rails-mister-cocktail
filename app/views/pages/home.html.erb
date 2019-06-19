@@ -10,14 +10,19 @@
   <h1>Featured cocktails</h1>
   <div class="row">
     <% @cocktails.each do |cocktail| %>
-    <div class="row">
-      <div class="col-sm-6 col-md-3 col-lg-4">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%= cl_image_path cocktail.photo %>')">
-          <h2><%= cocktail.name %></h2>
-          <%= link_to "See more", cocktail_path(cocktail), class: 'card-link nav-add-btn' %>
+      <%= link_to cocktail_path(cocktail), style: 'text-decoration: none;' do %>
+        <div class="row">
+          <div class="col-sm-6 col-md-3 col-lg-4">
+              <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%= cl_image_path cocktail.photo %>')">
+                <h2><%= cocktail.name %></h2>
+              </div>
+          </div>
         </div>
-      </div>
-    </div>
+      <% end %>
     <% end %>
   </div>
 </div>
+
+
+<!-- if you want to add see more button:  -->
+<!-- link_to "See more", cocktail_path(cocktail), class: 'card-link nav-add-btn' -->
